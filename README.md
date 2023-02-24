@@ -12,7 +12,7 @@ All credit goes to NPEX42, I made this since the operating system I've been work
 ```rust
 // Read A Single block from a disk
 pub fn read_single() {
-    use x86_ata::{init, ATA_BLOCK_SIZE, read};
+    use ata_x86::{init, ATA_BLOCK_SIZE, read};
     // 1. Initialise ATA Subsystem. (Perform Once, on boot)
     init().expect("Failed To Start ATA...");
     
@@ -26,7 +26,7 @@ pub fn read_single() {
 
 // Write A Single block onto a disk
 pub fn write_single() {
-    use x86_ata::{init, ATA_BLOCK_SIZE, write};
+    use ata_x86::{init, ATA_BLOCK_SIZE, write};
     // 1. Initialise ATA Subsystem. (Perform Once, on boot)
     init().expect("Failed To Start ATA...");
     
