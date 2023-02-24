@@ -13,7 +13,7 @@
 [package]
 edition = "2018"
 name = "ata_x86"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Daniyal Khan<danikhan632@gmail.com>, NPEX42 <NPEX42@gmail.com>"]
 description = "All credit goes to NPEX42, I made this since the operating system I've been working on breaks \nWhen the x86_64 crate is imported and this removes it. A Simple, Amazing x86 ATA Crate. Credit to NPEX42"
 license = "MIT"
