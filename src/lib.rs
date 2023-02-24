@@ -8,7 +8,7 @@ extern crate alloc;
 use alloc::string::String;
 use alloc::vec::Vec;
 use bit_field::BitField;
-use core::hint::spin_loop;
+use core::{hint::spin_loop, arch::asm};
 use lazy_static::lazy_static;
 use spin::Mutex;
 // use x86_64::instructions::port::;
@@ -21,7 +21,7 @@ pub const ATA_BLOCK_SIZE: usize = 512;
 
 fn sleep_ticks(ticks: usize) {
     for _ in 0..=ticks {
-        x86_64::instructions::hlt();
+        unsafe {asm!("hlt", options(nomem, nostack, preserves_flags));}
     }
 }
 
